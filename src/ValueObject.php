@@ -3,21 +3,21 @@
 declare(strict_types=1);
 
 /**
- * This file is part of michael-rubel/laravel-value-objects. (https://github.com/michael-rubel/laravel-value-objects)
+ * This file is part of ximki-vinki/laravel-value-objects. (https://github.com/ximki-vinki/laravel-value-objects)
  *
- * @link https://github.com/michael-rubel/laravel-value-objects for the canonical source repository
+ * @link https://github.com/ximki-vinki/laravel-value-objects for the canonical source repository
  * @copyright Copyright (c) 2022 Michael Rubél. (https://github.com/michael-rubel/)
- * @license https://raw.githubusercontent.com/michael-rubel/laravel-value-objects/main/LICENSE.md MIT
+ * @license https://raw.githubusercontent.com/ximki-vinki/laravel-value-objects/main/LICENSE.md MIT
  */
 
-namespace MichaelRubel\ValueObjects;
+namespace XimkiVinki\ValueObjects;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use InvalidArgumentException;
-use MichaelRubel\ValueObjects\Concerns\HandlesCallbacks;
-use MichaelRubel\ValueObjects\Contracts\Immutable;
+use XimkiVinki\ValueObjects\Concerns\HandlesCallbacks;
+use XimkiVinki\ValueObjects\Contracts\Immutable;
 use Throwable;
 
 /**

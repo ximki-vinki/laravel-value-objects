@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use MichaelRubel\ValueObjects\Collection\Primitive\Text;
+use XimkiVinki\ValueObjects\Collection\Primitive\Text;
 
 test('text can accept string', function () {
     $valueObject = new Text('1');

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Stringable;
-use MichaelRubel\ValueObjects\Collection\Complex\Name;
+use XimkiVinki\ValueObjects\Collection\Complex\Name;
 
 test('name replaces invisible characters', function () {
     $name = new Name(' Company Name ');

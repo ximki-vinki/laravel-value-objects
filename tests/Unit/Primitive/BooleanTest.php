@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use MichaelRubel\ValueObjects\Collection\Primitive\Boolean;
+use XimkiVinki\ValueObjects\Collection\Primitive\Boolean;
 
 test('boolean can accept integer', function () {
     $valueObject = new Boolean(0);

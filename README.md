@@ -1,38 +1,38 @@
 ![Value Objects for Laravel](https://user-images.githubusercontent.com/37669560/200172635-6b2ca8d8-fb2b-4037-a697-b8f6e4c8c615.png)
 
 # Laravel Value Objects
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/michael-rubel/laravel-value-objects.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/michael-rubel/laravel-value-objects)
-[![Tests](https://img.shields.io/github/actions/workflow/status/michael-rubel/laravel-value-objects/run-tests.yml?branch=main&style=flat-square&label=tests&logo=github)](https://github.com/michael-rubel/laravel-value-objects/actions)
-[![Code Quality](https://img.shields.io/scrutinizer/quality/g/michael-rubel/laravel-value-objects.svg?style=flat-square&logo=scrutinizer)](https://scrutinizer-ci.com/g/michael-rubel/laravel-value-objects/?branch=main)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/michael-rubel/laravel-value-objects.svg?style=flat-square&logo=scrutinizer)](https://scrutinizer-ci.com/g/michael-rubel/laravel-value-objects/?branch=main)
-[![Infection](https://img.shields.io/github/actions/workflow/status/michael-rubel/laravel-value-objects/infection.yml?branch=main&style=flat-square&label=infection&logo=php)](https://github.com/michael-rubel/laravel-value-objects/actions)
-[![Larastan](https://img.shields.io/github/actions/workflow/status/michael-rubel/laravel-value-objects/phpstan.yml?branch=main&style=flat-square&label=larastan&logo=laravel)](https://github.com/michael-rubel/laravel-value-objects/actions)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ximki-vinki/laravel-value-objects.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/ximki-vinki/laravel-value-objects)
+[![Tests](https://img.shields.io/github/actions/workflow/status/ximki-vinki/laravel-value-objects/run-tests.yml?branch=main&style=flat-square&label=tests&logo=github)](https://github.com/ximki-vinki/laravel-value-objects/actions)
+[![Infection](https://img.shields.io/github/actions/workflow/status/ximki-vinki/laravel-value-objects/infection.yml?branch=main&style=flat-square&label=infection&logo=php)](https://github.com/ximki-vinki/laravel-value-objects/actions)
+[![Larastan](https://img.shields.io/github/actions/workflow/status/ximki-vinki/laravel-value-objects/phpstan.yml?branch=main&style=flat-square&label=larastan&logo=laravel)](https://github.com/ximki-vinki/laravel-value-objects/actions)
+
+Maintained fork of [michael-rubel/laravel-value-objects](https://github.com/michael-rubel/laravel-value-objects) by [Michael Rubél](https://github.com/michael-rubel). Namespace: `XimkiVinki\ValueObjects`.
 
 A bunch of general-purpose value objects you can use in your Laravel application.
 
 ---
 
-The package requires `PHP 8.1` or higher and `Laravel 10` or higher.
+The package requires `PHP 8.2` or higher and `Laravel 10` or higher.
 
 ## Installation
 Install the package using composer:
 ```bash
-composer require michael-rubel/laravel-value-objects
+composer require ximki-vinki/laravel-value-objects
 ```
 
 ## Built-in value objects
 
-- [`Boolean`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Primitive/Boolean.php)
-- [`ClassString`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/ClassString.php)
-- [`Email`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/Email.php)
-- [`FullName`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/FullName.php)
-- [`Name`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/Name.php)
-- [`Number`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Primitive/Number.php)
-- [`Phone`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/Phone.php)
-- [`TaxNumber`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/TaxNumber.php)
-- [`Text`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Primitive/Text.php)
-- [`Url`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/Url.php)
-- [`Uuid`](https://github.com/michael-rubel/laravel-value-objects/blob/main/src/Collection/Complex/Uuid.php)
+- [`Boolean`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Primitive/Boolean.php)
+- [`ClassString`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/ClassString.php)
+- [`Email`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/Email.php)
+- [`FullName`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/FullName.php)
+- [`Name`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/Name.php)
+- [`Number`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Primitive/Number.php)
+- [`Phone`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/Phone.php)
+- [`TaxNumber`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/TaxNumber.php)
+- [`Text`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Primitive/Text.php)
+- [`Url`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/Url.php)
+- [`Uuid`](https://github.com/ximki-vinki/laravel-value-objects/blob/main/src/Collection/Complex/Uuid.php)
 
 ### Artisan command
 You can generate custom value objects with Artisan command:

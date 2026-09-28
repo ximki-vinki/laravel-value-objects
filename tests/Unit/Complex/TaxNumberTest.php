@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Complex\TaxNumber;
+use XimkiVinki\ValueObjects\Collection\Complex\TaxNumber;
 
 test('tax number cannot be null', function () {
     $this->expectException(\TypeError::class);

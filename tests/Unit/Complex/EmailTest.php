@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Stringable;
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Complex\Email;
+use XimkiVinki\ValueObjects\Collection\Complex\Email;
 
 test('email is ok', function () {
     $email = new Email('michael@laravel.software');

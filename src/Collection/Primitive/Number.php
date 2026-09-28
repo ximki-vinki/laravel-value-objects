@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * This file is part of michael-rubel/laravel-value-objects. (https://github.com/michael-rubel/laravel-value-objects)
+ * This file is part of ximki-vinki/laravel-value-objects. (https://github.com/ximki-vinki/laravel-value-objects)
  *
- * @link https://github.com/michael-rubel/laravel-value-objects for the canonical source repository
+ * @link https://github.com/ximki-vinki/laravel-value-objects for the canonical source repository
  * @copyright Copyright (c) 2022 Michael Rubél. (https://github.com/michael-rubel/)
- * @license https://raw.githubusercontent.com/michael-rubel/laravel-value-objects/main/LICENSE.md MIT
+ * @license https://raw.githubusercontent.com/ximki-vinki/laravel-value-objects/main/LICENSE.md MIT
  */
 
-namespace MichaelRubel\ValueObjects\Collection\Primitive;
+namespace XimkiVinki\ValueObjects\Collection\Primitive;
 
-use MichaelRubel\ValueObjects\Concerns\SanitizesNumbers;
-use MichaelRubel\ValueObjects\ValueObject;
+use XimkiVinki\ValueObjects\Concerns\SanitizesNumbers;
+use XimkiVinki\ValueObjects\ValueObject;
 use PHP\Math\BigNumber\BigNumber;
 
 /**

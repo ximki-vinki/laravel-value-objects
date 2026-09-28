@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use MichaelRubel\ValueObjects\Sanitizers\NameSanitizer;
+use XimkiVinki\ValueObjects\Sanitizers\NameSanitizer;
 
 test('sanitizes names', function (?string $input, string $expected) {
     expect((new NameSanitizer)->sanitize($input))->toBe($expected);

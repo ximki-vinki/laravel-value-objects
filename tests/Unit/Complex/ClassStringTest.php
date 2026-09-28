@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Complex\ClassString;
-use MichaelRubel\ValueObjects\Tests\TestCase;
+use XimkiVinki\ValueObjects\Collection\Complex\ClassString;
+use XimkiVinki\ValueObjects\Tests\TestCase;
 
 test('class string cannot be empty string', function () {
     $this->expectException(ValidationException::class);
@@ -65,7 +65,7 @@ test('class string is interface & exists but class dont', function () {
 test('can cast class string to string', function () {
     $classString = new ClassString(ClassString::class);
 
-    $this->assertSame(\MichaelRubel\ValueObjects\Collection\Complex\ClassString::class, (string) $classString);
+    $this->assertSame(\XimkiVinki\ValueObjects\Collection\Complex\ClassString::class, (string) $classString);
 });
 
 test('can instantiate a class from class string value', function () {

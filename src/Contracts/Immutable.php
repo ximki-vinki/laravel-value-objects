@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MichaelRubel\ValueObjects\Contracts;
+namespace XimkiVinki\ValueObjects\Contracts;
 
 use InvalidArgumentException;
 

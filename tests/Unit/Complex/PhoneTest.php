@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Complex\Phone;
+use XimkiVinki\ValueObjects\Collection\Complex\Phone;
 
 test('phone is ok', function () {
     $phone = new Phone('+38 000 000 00 00');

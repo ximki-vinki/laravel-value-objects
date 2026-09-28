@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MichaelRubel\ValueObjects\Concerns;
+namespace XimkiVinki\ValueObjects\Concerns;
 
 use LengthException;
 

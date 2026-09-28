@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Complex\Uuid;
+use XimkiVinki\ValueObjects\Collection\Complex\Uuid;
 
 test('can get uuid using uuid method', function () {
     $uuid        = (string) Str::uuid();

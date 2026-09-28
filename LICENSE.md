@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) Michael Rubél <contact@observer.name>
+Copyright (c) 2022 Michael Rubél <contact@observer.name>
+Copyright (c) 2026 Ilia Manyutin <ximki0vinki@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

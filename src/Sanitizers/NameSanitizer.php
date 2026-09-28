@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MichaelRubel\ValueObjects\Sanitizers;
+namespace XimkiVinki\ValueObjects\Sanitizers;
 
 class NameSanitizer
 {

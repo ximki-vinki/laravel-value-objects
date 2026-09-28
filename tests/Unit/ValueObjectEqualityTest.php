@@ -1,7 +1,7 @@
 <?php
 
-use MichaelRubel\ValueObjects\Collection\Complex\ClassString;
-use MichaelRubel\ValueObjects\Collection\Primitive\Number;
+use XimkiVinki\ValueObjects\Collection\Complex\ClassString;
+use XimkiVinki\ValueObjects\Collection\Primitive\Number;
 
 test('value objects are equal', function () {
     $vo1 = new ClassString('Exception');

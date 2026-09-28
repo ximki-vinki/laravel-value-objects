@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MichaelRubel\ValueObjects;
+namespace XimkiVinki\ValueObjects;
 
-use MichaelRubel\ValueObjects\Artisan\ValueObjectMakeCommand;
+use XimkiVinki\ValueObjects\Artisan\ValueObjectMakeCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

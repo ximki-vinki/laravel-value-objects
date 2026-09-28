@@ -1,6 +1,6 @@
 <?php
 
-namespace MichaelRubel\ValueObjects\Concerns;
+namespace XimkiVinki\ValueObjects\Concerns;
 
 use Closure;
 

@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Stringable;
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Complex\Url;
+use XimkiVinki\ValueObjects\Collection\Complex\Url;
 
 test('can instantiate valid url', function () {
     $url = new Url('test-url');

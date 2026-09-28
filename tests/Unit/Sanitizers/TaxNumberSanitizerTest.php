@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use MichaelRubel\ValueObjects\Sanitizers\TaxNumberSanitizer;
+use XimkiVinki\ValueObjects\Sanitizers\TaxNumberSanitizer;
 
 test('sanitizes tax numbers', function (?string $taxNumber, ?string $country, string $expected) {
     expect((new TaxNumberSanitizer)->sanitize($taxNumber, $country))->toBe($expected);

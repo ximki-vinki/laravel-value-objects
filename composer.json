@@ -1,45 +1,51 @@
 {
-    "name": "michael-rubel/laravel-value-objects",
-    "description": "It is an example template for Laravel packages. Fill or change it the way you like.",
+    "name": "ximki-vinki/laravel-value-objects",
+    "description": "A bunch of general-purpose value objects you can use in your Laravel application.",
     "keywords": [
-        "michael-rubel",
+        "ximki-vinki",
         "laravel",
-        "laravel-value-objects"
+        "laravel-value-objects",
+        "value-objects"
     ],
-    "homepage": "https://github.com/michael-rubel/laravel-value-objects",
+    "homepage": "https://github.com/ximki-vinki/laravel-value-objects",
     "license": "MIT",
     "authors": [
         {
-            "name": "Michael Rub\u00e9l",
+            "name": "Michael Rubél",
             "email": "contact@observer.name",
-            "role": "Author"
+            "role": "Original Author"
+        },
+        {
+            "name": "Ilia Manyutin",
+            "email": "ximki0vinki@gmail.com",
+            "role": "Maintainer"
         }
     ],
     "require": {
-        "php": "^8.1",
-        "illuminate/contracts": "^10.0|^11.0",
-        "illuminate/validation": "^10.0|^11.0",
+        "php": "^8.2",
+        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "illuminate/validation": "^10.0|^11.0|^12.0",
         "phpmath/bignumber": "^1.2",
         "spatie/laravel-package-tools": "^1.12"
     },
     "require-dev": {
-        "infection/infection": "^0.27.3",
-        "larastan/larastan": "^2.0",
+        "infection/infection": ">=0.27.3 <0.33",
+        "larastan/larastan": "^2.0|^3.0",
         "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^6.0|^7.0|^8.0",
-        "orchestra/testbench": "^8.0|^9.0",
-        "pestphp/pest": "^1.16|^2.0",
-        "phpunit/phpunit": "^9.5|^10.5",
-        "rector/rector": "^1.2"
+        "nunomaduro/collision": "^7.0|^8.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "pestphp/pest": "^2.0|^3.0",
+        "phpunit/phpunit": "^10.5|^11.0",
+        "rector/rector": "^1.2|^2.0"
     },
     "autoload": {
         "psr-4": {
-            "MichaelRubel\\ValueObjects\\": "src"
+            "XimkiVinki\\ValueObjects\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MichaelRubel\\ValueObjects\\Tests\\": "tests"
+            "XimkiVinki\\ValueObjects\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -57,12 +63,14 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "infection/extension-installer": true
+        },
+        "platform": {
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "MichaelRubel\\ValueObjects\\ValueObjectServiceProvider"
+                "XimkiVinki\\ValueObjects\\ValueObjectServiceProvider"
             ]
         }
     },

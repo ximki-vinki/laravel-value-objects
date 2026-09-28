@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Stringable;
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Complex\FullName;
+use XimkiVinki\ValueObjects\Collection\Complex\FullName;
 
 test('can get first name', function () {
     $name = new FullName('Michael Rubél');

@@ -1,7 +1,7 @@
 <?php
 
-use MichaelRubel\ValueObjects\Collection\Primitive\Text;
-use MichaelRubel\ValueObjects\ValueObject;
+use XimkiVinki\ValueObjects\Collection\Primitive\Text;
+use XimkiVinki\ValueObjects\ValueObject;
 
 test('base value object is macroable', function () {
     ValueObject::macro('collect', fn() => collect($this->value()));

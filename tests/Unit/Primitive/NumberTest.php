@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use MichaelRubel\ValueObjects\Collection\Primitive\Number;
+use XimkiVinki\ValueObjects\Collection\Primitive\Number;
 use PHP\Math\BigNumber\BigNumber;
 
 test('number can accept integer', function () {
@@ -318,7 +318,7 @@ test('big number is immutable', function () {
 
 test('number uses sanitizes numbers trait', function () {
     $this->assertTrue(
-        in_array(\MichaelRubel\ValueObjects\Concerns\SanitizesNumbers::class,
+        in_array(\XimkiVinki\ValueObjects\Concerns\SanitizesNumbers::class,
             class_uses_recursive(Number::class)
         )
     );

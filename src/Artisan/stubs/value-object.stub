@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace {{ namespace }};
 
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\ValueObject;
+use XimkiVinki\ValueObjects\ValueObject;
 
 /**
  * @template TKey of array-key

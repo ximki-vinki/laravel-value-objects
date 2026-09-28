@@ -1,19 +1,19 @@
 <?php
 
 /**
- * This file is part of michael-rubel/laravel-value-objects. (https://github.com/michael-rubel/laravel-value-objects)
+ * This file is part of ximki-vinki/laravel-value-objects. (https://github.com/ximki-vinki/laravel-value-objects)
  *
- * @link https://github.com/michael-rubel/laravel-value-objects for the canonical source repository
+ * @link https://github.com/ximki-vinki/laravel-value-objects for the canonical source repository
  * @copyright Copyright (c) 2022 Michael Rubél. (https://github.com/michael-rubel/)
- * @license https://raw.githubusercontent.com/michael-rubel/laravel-value-objects/main/LICENSE.md MIT
+ * @license https://raw.githubusercontent.com/ximki-vinki/laravel-value-objects/main/LICENSE.md MIT
  */
 
-namespace MichaelRubel\ValueObjects\Collection\Complex;
+namespace XimkiVinki\ValueObjects\Collection\Complex;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Stringable;
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\ValueObjects\Collection\Primitive\Text;
+use XimkiVinki\ValueObjects\Collection\Primitive\Text;
 
 /**
  * "Email" object that represents the email address.

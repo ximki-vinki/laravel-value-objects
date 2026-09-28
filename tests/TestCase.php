@@ -1,8 +1,8 @@
 <?php
 
-namespace MichaelRubel\ValueObjects\Tests;
+namespace XimkiVinki\ValueObjects\Tests;
 
-use MichaelRubel\ValueObjects\ValueObjectServiceProvider;
+use XimkiVinki\ValueObjects\ValueObjectServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

@@ -17,27 +17,27 @@
         "@default": true,
         "IncrementInteger": {
             "ignore": [
-                "MichaelRubel\\ValueObjects\\Collection\\Complex\\FullName::__construct"
+                "XimkiVinki\\ValueObjects\\Collection\\Complex\\FullName::__construct"
             ]
         },
         "ConcatOperandRemoval": {
             "ignore": [
-                "MichaelRubel\\ValueObjects\\Artisan\\ValueObjectMakeCommand::getDefaultNamespace"
+                "XimkiVinki\\ValueObjects\\Artisan\\ValueObjectMakeCommand::getDefaultNamespace"
             ]
         },
         "Concat": {
             "ignore": [
-                "MichaelRubel\\ValueObjects\\Artisan\\ValueObjectMakeCommand::getDefaultNamespace"
+                "XimkiVinki\\ValueObjects\\Artisan\\ValueObjectMakeCommand::getDefaultNamespace"
             ]
         },
         "CastString": {
             "ignore": [
-                "MichaelRubel\\ValueObjects\\Collection\\Primitive\\Boolean::handleNonBoolean"
+                "XimkiVinki\\ValueObjects\\Collection\\Primitive\\Boolean::handleNonBoolean"
             ]
         },
         "Ternary": {
             "ignore": [
-                "MichaelRubel\\ValueObjects\\Collection\\Primitive\\Boolean::handleNonBoolean"
+                "XimkiVinki\\ValueObjects\\Collection\\Primitive\\Boolean::handleNonBoolean"
             ]
         }
     }

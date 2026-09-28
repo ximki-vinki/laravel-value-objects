@@ -12,7 +12,7 @@
 */
 
 use Illuminate\Database\Eloquent\Model;
-use MichaelRubel\ValueObjects\Tests\TestCase;
+use XimkiVinki\ValueObjects\Tests\TestCase;
 
 uses(TestCase::class)
     ->in('Feature', 'Unit');
