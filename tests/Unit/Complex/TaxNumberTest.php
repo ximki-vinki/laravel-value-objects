@@ -135,21 +135,15 @@ test('tax number is makeable', function () {
 });
 
 test('tax number is macroable', function () {
-    TaxNumber::macro('getLength', function () {
-        return str($this->fullTaxNumber())->length();
-    });
+    TaxNumber::macro('getLength', fn() => str($this->fullTaxNumber())->length());
     $valueObject = new TaxNumber('PL0123456789');
     $this->assertSame(12, $valueObject->getLength());
 });
 
 test('tax number is conditionable', function () {
     $valueObject = new TaxNumber('PL0123456789');
-    $this->assertSame('PL', $valueObject->when(function ($vat) {
-        return $vat->prefix() !== null;
-    })->prefix());
-    $this->assertSame($valueObject, $valueObject->when(function ($vat) {
-        return $vat->prefix() === null;
-    })->prefix());
+    $this->assertSame('PL', $valueObject->when(fn($vat) => $vat->prefix() !== null)->prefix());
+    $this->assertSame($valueObject, $valueObject->when(fn($vat) => $vat->prefix() === null)->prefix());
 });
 
 test('tax number is arrayable', function () {

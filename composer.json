@@ -24,12 +24,13 @@
     },
     "require-dev": {
         "infection/infection": "^0.27.3",
+        "larastan/larastan": "^2.0",
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^6.0|^7.0|^8.0",
-        "larastan/larastan": "^2.0",
         "orchestra/testbench": "^8.0|^9.0",
         "pestphp/pest": "^1.16|^2.0",
-        "phpunit/phpunit": "^9.5|^10.5"
+        "phpunit/phpunit": "^9.5|^10.5",
+        "rector/rector": "^1.2"
     },
     "autoload": {
         "psr-4": {

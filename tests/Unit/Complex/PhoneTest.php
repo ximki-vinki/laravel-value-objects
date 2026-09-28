@@ -98,9 +98,7 @@ test('phone is makeable', function () {
 });
 
 test('phone is macroable', function () {
-    Phone::macro('str', function () {
-        return str($this->value());
-    });
+    Phone::macro('str', fn() => str($this->value()));
 
     $valueObject = new Phone('+48 00 000 00 00');
 

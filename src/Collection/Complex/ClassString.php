@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace MichaelRubel\ValueObjects\Collection\Complex;
 
 use Illuminate\Validation\ValidationException;
-use InvalidArgumentException;
 use MichaelRubel\ValueObjects\ValueObject;
 
 /**
@@ -33,22 +32,13 @@ use MichaelRubel\ValueObjects\ValueObject;
 class ClassString extends ValueObject
 {
     /**
-     * @var string
-     */
-    protected string $string;
-
-    /**
      * Create a new instance of the value object.
      *
      * @param  string  $string
      */
-    public function __construct(string $string)
+    public function __construct(protected string $string)
     {
-        if (isset($this->string)) {
-            throw new InvalidArgumentException(static::IMMUTABLE_MESSAGE);
-        }
-
-        $this->string = $string;
+        parent::__construct();
 
         $this->validate();
     }

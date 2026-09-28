@@ -28,10 +28,6 @@ uses(TestCase::class)
 |
 */
 
-expect()->extend('toBeOne', function () {
-    return $this->toBe(1);
-});
+expect()->extend('toBeOne', fn() => $this->toBe(1));
 
-expect()->extend('toBeModel', function () {
-    return $this->toBeInstanceOf(Model::class);
-});
+expect()->extend('toBeModel', fn() => $this->toBeInstanceOf(Model::class));

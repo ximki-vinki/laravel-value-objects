@@ -12,7 +12,6 @@ declare(strict_types=1);
 
 namespace MichaelRubel\ValueObjects\Collection\Primitive;
 
-use InvalidArgumentException;
 use MichaelRubel\ValueObjects\Concerns\SanitizesNumbers;
 use MichaelRubel\ValueObjects\ValueObject;
 use PHP\Math\BigNumber\BigNumber;
@@ -59,9 +58,7 @@ class Number extends ValueObject
      */
     public function __construct(int|string|float $number, protected int $scale = 2)
     {
-        if (isset($this->bigNumber)) {
-            throw new InvalidArgumentException(static::IMMUTABLE_MESSAGE);
-        }
+        parent::__construct();
 
         $this->bigNumber = new BigNumber(
             $this->sanitize($number), $this->scale, mutable: false

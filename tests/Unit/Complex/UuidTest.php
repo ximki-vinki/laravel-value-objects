@@ -62,9 +62,7 @@ test('full name is makeable', function () {
 
 test('uuid is macroable', function () {
     $uuid = (string) Str::uuid();
-    Uuid::macro('getLength', function () {
-        return str($this->value())->length();
-    });
+    Uuid::macro('getLength', fn() => str($this->value())->length());
     $valueObject = new Uuid($uuid);
     $this->assertSame(36, $valueObject->getLength());
 });

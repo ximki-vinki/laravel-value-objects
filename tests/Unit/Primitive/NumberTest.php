@@ -265,9 +265,7 @@ test('number is makeable', function () {
 });
 
 test('number is macroable', function () {
-    Number::macro('getLength', function () {
-        return str($this->value())->length();
-    });
+    Number::macro('getLength', fn() => str($this->value())->length());
     $valueObject = new Number('12.3');
     $this->assertSame(5, $valueObject->getLength());
 });
@@ -312,9 +310,7 @@ test('number has immutable constructor', function () {
 });
 
 test('big number is immutable', function () {
-    Number::macro('isImmutable', function () {
-        return ! $this->bigNumber->isMutable();
-    });
+    Number::macro('isImmutable', fn() => ! $this->bigNumber->isMutable());
 
     $number = new Number('1.2000');
     $this->assertTrue($number->isImmutable());
@@ -322,7 +318,7 @@ test('big number is immutable', function () {
 
 test('number uses sanitizes numbers trait', function () {
     $this->assertTrue(
-        in_array('MichaelRubel\ValueObjects\Concerns\SanitizesNumbers',
+        in_array(\MichaelRubel\ValueObjects\Concerns\SanitizesNumbers::class,
             class_uses_recursive(Number::class)
         )
     );

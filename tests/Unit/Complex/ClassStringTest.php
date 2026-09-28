@@ -65,7 +65,7 @@ test('class string is interface & exists but class dont', function () {
 test('can cast class string to string', function () {
     $classString = new ClassString(ClassString::class);
 
-    $this->assertSame('MichaelRubel\ValueObjects\Collection\Complex\ClassString', (string) $classString);
+    $this->assertSame(\MichaelRubel\ValueObjects\Collection\Complex\ClassString::class, (string) $classString);
 });
 
 test('can instantiate a class from class string value', function () {
@@ -84,9 +84,7 @@ test('class string is makeable', function () {
 });
 
 test('class string is macroable', function () {
-    ClassString::macro('getLength', function () {
-        return str($this->value())->length();
-    });
+    ClassString::macro('getLength', fn() => str($this->value())->length());
     $valueObject = new ClassString('TestClass\Testing');
     $this->assertSame(17, $valueObject->getLength());
 });

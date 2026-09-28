@@ -19,7 +19,6 @@ interface Immutable
      * Implement an immutable "set".
      *
      * @param  string  $name
-     * @param  mixed  $value
      * @return void
      * @throws InvalidArgumentException
      */

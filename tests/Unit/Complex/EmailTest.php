@@ -71,9 +71,7 @@ test('email is makeable', function () {
 });
 
 test('email is macroable', function () {
-    Email::macro('str', function () {
-        return str($this->value());
-    });
+    Email::macro('str', fn() => str($this->value()));
 
     $valueObject = new Email('michael@laravel.software');
 

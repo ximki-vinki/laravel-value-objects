@@ -50,9 +50,7 @@ test('name is makeable', function () {
 });
 
 test('name is macroable', function () {
-    Name::macro('str', function () {
-        return str($this->value());
-    });
+    Name::macro('str', fn() => str($this->value()));
 
     $valueObject = new Name('Lorem ipsum');
 

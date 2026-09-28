@@ -72,9 +72,7 @@ test('text is makeable', function () {
 });
 
 test('text is macroable', function () {
-    Text::macro('str', function () {
-        return str($this->value());
-    });
+    Text::macro('str', fn() => str($this->value()));
 
     $valueObject = new Text('Lorem ipsum');
 

@@ -30,9 +30,27 @@ use Throwable;
  *
  * @implements Arrayable<TKey, TValue>
  */
-abstract class ValueObject implements Arrayable, Immutable
+abstract class ValueObject implements Arrayable, Immutable, \Stringable
 {
     use Conditionable, HandlesCallbacks, Macroable;
+
+    private bool $constructed = false;
+
+    /**
+     * Create a new instance of the value object.
+     *
+     * @return void
+     *
+     * @throws InvalidArgumentException
+     */
+    public function __construct()
+    {
+        if ($this->constructed) {
+            throw new InvalidArgumentException(static::IMMUTABLE_MESSAGE);
+        }
+
+        $this->constructed = true;
+    }
 
     /**
      * Get the object value.
@@ -44,7 +62,6 @@ abstract class ValueObject implements Arrayable, Immutable
     /**
      * Convenient method to create a value object statically.
      *
-     * @param  mixed  $values
      *
      * @return static
      */
@@ -56,7 +73,6 @@ abstract class ValueObject implements Arrayable, Immutable
     /**
      * Convenient method to create a value object statically.
      *
-     * @param  mixed  $values
      *
      * @return static
      */
@@ -68,7 +84,6 @@ abstract class ValueObject implements Arrayable, Immutable
     /**
      * Create a value object or return null.
      *
-     * @param  mixed  $values
      *
      * @return static|null
      */

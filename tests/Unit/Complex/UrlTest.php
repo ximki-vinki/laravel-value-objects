@@ -65,9 +65,7 @@ test('url is makeable', function () {
 });
 
 test('url is macroable', function () {
-    Url::macro('str', function () {
-        return str($this->value());
-    });
+    Url::macro('str', fn() => str($this->value()));
 
     $valueObject = new Url('test-url');
 

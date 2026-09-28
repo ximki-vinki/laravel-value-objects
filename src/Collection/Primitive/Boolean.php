@@ -58,9 +58,7 @@ class Boolean extends ValueObject
      */
     public function __construct(bool|int|string $value)
     {
-        if (isset($this->value)) {
-            throw new InvalidArgumentException(static::IMMUTABLE_MESSAGE);
-        }
+        parent::__construct();
 
         ! is_bool($value) ? $this->handleNonBoolean($value) : $this->value = $value;
     }
