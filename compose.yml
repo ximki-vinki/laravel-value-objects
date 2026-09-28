@@ -1,0 +1,14 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ${HOME}/.cache/composer:/tmp/composer-cache
+    environment:
+      COMPOSER_HOME: /tmp/composer-cache
+      COMPOSER_ALLOW_SUPERUSER: "1"
+    stdin_open: true
+    tty: true

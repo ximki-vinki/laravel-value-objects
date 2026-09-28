@@ -10,7 +10,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Michael Rubél",
+            "name": "Michael Rub\u00e9l",
             "email": "contact@observer.name",
             "role": "Author"
         }
@@ -43,8 +43,14 @@
         }
     },
     "scripts": {
-        "test": "./vendor/bin/testbench package:test --no-coverage",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+        "test": [
+            "Composer\\Config::disableProcessTimeout",
+            "bin/in-app ./vendor/bin/pest"
+        ],
+        "test-coverage": [
+            "Composer\\Config::disableProcessTimeout",
+            "bin/in-app ./vendor/bin/pest --coverage-html=coverage"
+        ]
     },
     "config": {
         "sort-packages": true,
@@ -56,7 +62,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "MichaelRubel\\ValueObjects\\ValueObjectServiceProvider"
+                "MichaelRubel\\ValueObjects\\ValueObjectServiceProvider"
             ]
         }
     },
