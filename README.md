@@ -14,9 +14,6 @@ A bunch of general-purpose value objects you can use in your Laravel application
 
 The package requires `PHP 8.1` or higher and `Laravel 10` or higher.
 
-## #StandWithUkraine
-[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
-
 ## Installation
 Install the package using composer:
 ```bash
