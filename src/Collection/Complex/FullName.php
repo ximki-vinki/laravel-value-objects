@@ -15,7 +15,7 @@ namespace MichaelRubel\ValueObjects\Collection\Complex;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Stringable;
 use Illuminate\Validation\ValidationException;
-use MichaelRubel\Formatters\Collection\FullNameFormatter;
+use MichaelRubel\ValueObjects\Sanitizers\NameSanitizer;
 
 /**
  * "FullName" object presenting a full name.
@@ -118,7 +118,7 @@ class FullName extends Name
      */
     protected function sanitize(): void
     {
-        $this->value = format(FullNameFormatter::class, $this->value());
+        $this->value = (new NameSanitizer)->sanitizeFull($this->value());
     }
 
     /**

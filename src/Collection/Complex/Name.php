@@ -13,8 +13,8 @@ declare(strict_types=1);
 namespace MichaelRubel\ValueObjects\Collection\Complex;
 
 use Illuminate\Support\Stringable;
-use MichaelRubel\Formatters\Collection\NameFormatter;
 use MichaelRubel\ValueObjects\Collection\Primitive\Text;
+use MichaelRubel\ValueObjects\Sanitizers\NameSanitizer;
 
 /**
  * "Name" object presenting a generic name.
@@ -51,6 +51,6 @@ class Name extends Text
      */
     protected function sanitize(): void
     {
-        $this->value = format(NameFormatter::class, $this->value());
+        $this->value = (new NameSanitizer)->sanitize($this->value());
     }
 }

@@ -14,7 +14,7 @@ namespace MichaelRubel\ValueObjects\Collection\Complex;
 
 use Illuminate\Validation\ValidationException;
 use InvalidArgumentException;
-use MichaelRubel\Formatters\Collection\TaxNumberFormatter;
+use MichaelRubel\ValueObjects\Sanitizers\TaxNumberSanitizer;
 use MichaelRubel\ValueObjects\ValueObject;
 
 /**
@@ -153,7 +153,7 @@ class TaxNumber extends ValueObject
      */
     protected function sanitize(): void
     {
-        $this->number = format(TaxNumberFormatter::class, $this->taxNumber(), $this->prefix());
+        $this->number = (new TaxNumberSanitizer)->sanitize($this->taxNumber(), $this->prefix());
     }
 
     /**
