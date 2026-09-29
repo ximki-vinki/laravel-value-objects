@@ -46,19 +46,19 @@ test('text can accept long text', function () {
 });
 
 test('text cannot accept null', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Text(null);
 });
 
 test('text fails when no argument passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Text;
 });
 
 test('text fails when empty string passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Text('');
 });
@@ -72,7 +72,7 @@ test('text is makeable', function () {
 });
 
 test('text is macroable', function () {
-    Text::macro('str', fn() => str($this->value()));
+    Text::macro('str', fn () => str($this->value()));
 
     $valueObject = new Text('Lorem ipsum');
 
@@ -111,20 +111,20 @@ test('text accepts stringable', function () {
 });
 
 test('text fails when empty stringable passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Text(str(''));
 });
 
 test('text has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Text('Lorem ipsum');
     $this->assertSame('Lorem ipsum', $valueObject->value);
     $valueObject->value = 'test';
 });
 
 test('text has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Text('Lorem ipsum');
     $valueObject->__construct(' Lorem ipsum ');
 });

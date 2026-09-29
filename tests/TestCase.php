@@ -2,8 +2,8 @@
 
 namespace XimkiVinki\ValueObjects\Tests;
 
-use XimkiVinki\ValueObjects\ValueObjectServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use XimkiVinki\ValueObjects\ValueObjectServiceProvider;
 
 class TestCase extends Orchestra
 {

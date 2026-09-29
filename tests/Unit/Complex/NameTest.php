@@ -24,19 +24,19 @@ TAGO PRZEDSIĘBIORSTWO PRZEMYSŁU CUKIERNICZEGO TADEUSZ GOŁĘBIEWSKI');
 });
 
 test('name cannot accept null', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Name(null);
 });
 
 test('name fails when no argument passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Name;
 });
 
 test('name fails when empty string passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Name('');
 });
@@ -50,7 +50,7 @@ test('name is makeable', function () {
 });
 
 test('name is macroable', function () {
-    Name::macro('str', fn() => str($this->value()));
+    Name::macro('str', fn () => str($this->value()));
 
     $valueObject = new Name('Lorem ipsum');
 
@@ -82,20 +82,20 @@ test('text accepts stringable', function () {
 });
 
 test('text fails when empty stringable passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Name(str(''));
 });
 
 test('name has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Name('Lorem ipsum');
     $this->assertSame('Lorem ipsum', $valueObject->value);
     $valueObject->value = 'immutable';
 });
 
 test('name has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Name('Lorem ipsum');
     $valueObject->__construct(' Lorem ipsum ');
 });

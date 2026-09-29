@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\File;
-use XimkiVinki\ValueObjects\Artisan\ValueObjectMakeCommand;
 use Symfony\Component\Console\Input\InputOption;
+use XimkiVinki\ValueObjects\Artisan\ValueObjectMakeCommand;
 
 test('can make value object using command', function () {
     $pathToGeneratedFile = app_path('ValueObjects' . DIRECTORY_SEPARATOR . 'TestValueObject.php');

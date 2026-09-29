@@ -55,25 +55,25 @@ test('boolean can accept native booleans', function () {
 });
 
 test('boolean fails when no argument passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Boolean;
 });
 
 test('boolean fails when null passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     (new Boolean(null))->value();
 });
 
 test('boolean fails when empty string passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     (new Boolean(''))->value();
 });
 
 test('boolean fails when any string passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     (new Boolean('asd'))->value();
 });
@@ -155,14 +155,14 @@ test('boolean is stringable', function () {
 });
 
 test('boolean has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Boolean('1');
     $this->assertTrue($valueObject->value);
     $valueObject->value = '0';
 });
 
 test('boolean has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Boolean('1');
     $valueObject->__construct('false');
 });

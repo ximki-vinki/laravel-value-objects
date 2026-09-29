@@ -22,7 +22,7 @@ test('validation exception message is correct in class string', function () {
 });
 
 test('class string cannot be null', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new ClassString(null);
 });
@@ -65,14 +65,14 @@ test('class string is interface & exists but class dont', function () {
 test('can cast class string to string', function () {
     $classString = new ClassString(ClassString::class);
 
-    $this->assertSame(\XimkiVinki\ValueObjects\Collection\Complex\ClassString::class, (string) $classString);
+    $this->assertSame(ClassString::class, (string) $classString);
 });
 
 test('can instantiate a class from class string value', function () {
     $classString = new ClassString('Exception');
 
-    $this->assertEquals(new \Exception, $classString->instantiate());
-    $this->assertEquals(new \Exception('test'), $classString->instantiateWith(['message' => 'test']));
+    $this->assertEquals(new Exception, $classString->instantiate());
+    $this->assertEquals(new Exception('test'), $classString->instantiateWith(['message' => 'test']));
 });
 
 test('class string is makeable', function () {
@@ -84,7 +84,7 @@ test('class string is makeable', function () {
 });
 
 test('class string is macroable', function () {
-    ClassString::macro('getLength', fn() => str($this->value())->length());
+    ClassString::macro('getLength', fn () => str($this->value())->length());
     $valueObject = new ClassString('TestClass\Testing');
     $this->assertSame(17, $valueObject->getLength());
 });
@@ -109,14 +109,14 @@ test('class string is stringable', function () {
 });
 
 test('class string has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new ClassString('\Exception');
     $this->assertSame('\Exception', $valueObject->string);
     $valueObject->classString = 'immutable';
 });
 
 test('class string has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new ClassString('\Exception');
     $valueObject->__construct('\Throwable');
 });

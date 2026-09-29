@@ -45,13 +45,13 @@ test('validation exception message is correct in email', function () {
 });
 
 test('email cannot accept null', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Email(null);
 });
 
 test('email fails when no argument passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Email;
 });
@@ -71,7 +71,7 @@ test('email is makeable', function () {
 });
 
 test('email is macroable', function () {
-    Email::macro('str', fn() => str($this->value()));
+    Email::macro('str', fn () => str($this->value()));
 
     $valueObject = new Email('michael@laravel.software');
 
@@ -113,14 +113,14 @@ test('email fails when empty stringable passed', function () {
 });
 
 test('email has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Email('contact@observer.name');
     $this->assertSame('contact@observer.name', $valueObject->value);
     $valueObject->value = 'immutable';
 });
 
 test('email has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Email('contact@observer.name');
     $valueObject->__construct('contact@observer.com');
 });

@@ -6,7 +6,7 @@ use Illuminate\Validation\ValidationException;
 use XimkiVinki\ValueObjects\Collection\Complex\TaxNumber;
 
 test('tax number cannot be null', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new TaxNumber(null);
 });
@@ -135,15 +135,15 @@ test('tax number is makeable', function () {
 });
 
 test('tax number is macroable', function () {
-    TaxNumber::macro('getLength', fn() => str($this->fullTaxNumber())->length());
+    TaxNumber::macro('getLength', fn () => str($this->fullTaxNumber())->length());
     $valueObject = new TaxNumber('PL0123456789');
     $this->assertSame(12, $valueObject->getLength());
 });
 
 test('tax number is conditionable', function () {
     $valueObject = new TaxNumber('PL0123456789');
-    $this->assertSame('PL', $valueObject->when(fn($vat) => $vat->prefix() !== null)->prefix());
-    $this->assertSame($valueObject, $valueObject->when(fn($vat) => $vat->prefix() === null)->prefix());
+    $this->assertSame('PL', $valueObject->when(fn ($vat) => $vat->prefix() !== null)->prefix());
+    $this->assertSame($valueObject, $valueObject->when(fn ($vat) => $vat->prefix() === null)->prefix());
 });
 
 test('tax number is arrayable', function () {
@@ -165,14 +165,14 @@ test('tax number is stringable', function () {
 });
 
 test('tax number has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new TaxNumber('PL0123456789');
     $this->assertSame('0123456789', $valueObject->number);
     $valueObject->tax_number = 'immutable';
 });
 
 test('tax number has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new TaxNumber('PL0123456789');
     $valueObject->__construct(' PL0123456789 ');
 });

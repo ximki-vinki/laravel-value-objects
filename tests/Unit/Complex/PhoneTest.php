@@ -75,12 +75,12 @@ test('validation exception message is correct in phone', function () {
 });
 
 test('phone cannot accept null', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
     new Phone(null);
 });
 
 test('phone fails when no argument passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
     new Phone;
 });
 
@@ -98,7 +98,7 @@ test('phone is makeable', function () {
 });
 
 test('phone is macroable', function () {
-    Phone::macro('str', fn() => str($this->value()));
+    Phone::macro('str', fn () => str($this->value()));
 
     $valueObject = new Phone('+48 00 000 00 00');
 
@@ -135,21 +135,21 @@ test('phone fails when empty stringable passed', function () {
 });
 
 test('phone is immutable', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Phone('+48 00 000 00 00');
     $this->assertSame('+48 00 000 00 00', $valueObject->value);
     $valueObject->value = 'immutable';
 });
 
 test('phone has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Phone('+48 00 000 00 00');
     $this->assertSame('+48 00 000 00 00', $valueObject->value);
     $valueObject->value = 'immutable';
 });
 
 test('phone has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Phone('+48 00 000 00 00');
     $valueObject->__construct('+38 000 000 00 00');
 });

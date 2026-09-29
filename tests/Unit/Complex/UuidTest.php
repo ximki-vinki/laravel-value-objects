@@ -45,7 +45,7 @@ test('validation exception message is correct in uuid', function () {
 });
 
 test('fails when null passed to uuid', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Uuid(null);
 });
@@ -62,7 +62,7 @@ test('full name is makeable', function () {
 
 test('uuid is macroable', function () {
     $uuid = (string) Str::uuid();
-    Uuid::macro('getLength', fn() => str($this->value())->length());
+    Uuid::macro('getLength', fn () => str($this->value())->length());
     $valueObject = new Uuid($uuid);
     $this->assertSame(36, $valueObject->getLength());
 });
@@ -94,7 +94,7 @@ test('uuid is stringable', function () {
 });
 
 test('uuid has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $uuid        = (string) Str::uuid();
     $valueObject = new Uuid($uuid);
     $this->assertSame($uuid, $valueObject->value);
@@ -102,7 +102,7 @@ test('uuid has immutable properties', function () {
 });
 
 test('uuid has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $uuid        = (string) Str::uuid();
     $valueObject = new Uuid($uuid);
     $valueObject->__construct($uuid, 'test');

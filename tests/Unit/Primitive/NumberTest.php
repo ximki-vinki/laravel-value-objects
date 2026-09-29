@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-use XimkiVinki\ValueObjects\Collection\Primitive\Number;
 use PHP\Math\BigNumber\BigNumber;
+use XimkiVinki\ValueObjects\Collection\Primitive\Number;
+use XimkiVinki\ValueObjects\Concerns\SanitizesNumbers;
 
 test('number can accept integer', function () {
     $valueObject = new Number(1);
@@ -100,25 +101,25 @@ test('number accepts formatted value', function ($input, $scale, $result) {
 ]);
 
 test('number fails when no argument passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Number;
 });
 
 test('number fails when text provided', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Number('asd');
 });
 
 test('number fails when empty string passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Number('');
 });
 
 test('number fails when null passed', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
 
     new Number(null);
 });
@@ -265,7 +266,7 @@ test('number is makeable', function () {
 });
 
 test('number is macroable', function () {
-    Number::macro('getLength', fn() => str($this->value())->length());
+    Number::macro('getLength', fn () => str($this->value())->length());
     $valueObject = new Number('12.3');
     $this->assertSame(5, $valueObject->getLength());
 });
@@ -297,20 +298,20 @@ test('number is stringable', function () {
 });
 
 test('number has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Number('1.2000');
     $this->assertEquals(new BigNumber('1.20', 2, false), $valueObject->bigNumber);
     $valueObject->bigNumber = new BigNumber('1.20');
 });
 
 test('number has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new Number('1.2000');
     $valueObject->__construct('1.5000');
 });
 
 test('big number is immutable', function () {
-    Number::macro('isImmutable', fn() => ! $this->bigNumber->isMutable());
+    Number::macro('isImmutable', fn () => ! $this->bigNumber->isMutable());
 
     $number = new Number('1.2000');
     $this->assertTrue($number->isImmutable());
@@ -318,7 +319,7 @@ test('big number is immutable', function () {
 
 test('number uses sanitizes numbers trait', function () {
     $this->assertTrue(
-        in_array(\XimkiVinki\ValueObjects\Concerns\SanitizesNumbers::class,
+        in_array(SanitizesNumbers::class,
             class_uses_recursive(Number::class)
         )
     );
@@ -382,13 +383,13 @@ test('negative number accepts formatted value', function ($input, $scale, $resul
 ]);
 
 test('negative number fails when invalid text provided', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Number('-asd');
 });
 
 test('negative number fails when empty string passed', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
 
     new Number('-');
 });

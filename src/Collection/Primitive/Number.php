@@ -12,9 +12,9 @@ declare(strict_types=1);
 
 namespace XimkiVinki\ValueObjects\Collection\Primitive;
 
+use PHP\Math\BigNumber\BigNumber;
 use XimkiVinki\ValueObjects\Concerns\SanitizesNumbers;
 use XimkiVinki\ValueObjects\ValueObject;
-use PHP\Math\BigNumber\BigNumber;
 
 /**
  * "Number" object that represents numeric values.
@@ -37,7 +37,7 @@ use PHP\Math\BigNumber\BigNumber;
  * @method string sqrt()
  * @method string subtract(float|int|string|BigNumber $value)
  *
- * @see \PHP\Math\BigNumber\BigNumber
+ * @see BigNumber
  *
  * @extends ValueObject<TKey, TValue>
  */

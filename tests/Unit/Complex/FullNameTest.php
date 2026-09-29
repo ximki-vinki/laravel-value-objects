@@ -93,7 +93,7 @@ test('validation exception message is correct in email', function () {
 });
 
 test('cannot pass null', function () {
-    $this->expectException(\TypeError::class);
+    $this->expectException(TypeError::class);
     $name = new FullName(null);
     $this->assertSame('', $name->fullName());
 });
@@ -159,14 +159,14 @@ test('full name fails when passed only first name', function () {
 });
 
 test('full name has immutable properties', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new FullName('Michael Rubél');
     $this->assertSame('Michael Rubél', $valueObject->value);
     $valueObject->full_name = 'immutable';
 });
 
 test('full name has immutable constructor', function () {
-    $this->expectException(\InvalidArgumentException::class);
+    $this->expectException(InvalidArgumentException::class);
     $valueObject = new FullName('Michael Rubél');
     $valueObject->__construct(' Michael Rubél ');
 });

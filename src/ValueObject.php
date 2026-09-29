@@ -16,9 +16,9 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use InvalidArgumentException;
+use Throwable;
 use XimkiVinki\ValueObjects\Concerns\HandlesCallbacks;
 use XimkiVinki\ValueObjects\Contracts\Immutable;
-use Throwable;
 
 /**
  * Base "ValueObject".
@@ -30,7 +30,7 @@ use Throwable;
  *
  * @implements Arrayable<TKey, TValue>
  */
-abstract class ValueObject implements Arrayable, Immutable, \Stringable
+abstract class ValueObject implements \Stringable, Arrayable, Immutable
 {
     use Conditionable, HandlesCallbacks, Macroable;
 
