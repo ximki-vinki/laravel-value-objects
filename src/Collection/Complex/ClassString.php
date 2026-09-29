@@ -20,14 +20,9 @@ use XimkiVinki\ValueObjects\ValueObject;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(string $string)
  * @method static static from(string $string)
  * @method static static makeOrNull(string|null $string)
- *
- * @extends ValueObject<TKey, TValue>
  */
 class ClassString extends ValueObject
 {
@@ -66,7 +61,7 @@ class ClassString extends ValueObject
     /**
      * Instantiate the class string if possible.
      *
-     * @param  array  $parameters
+     * @param  array<int, mixed>  $parameters
      *
      * @return object
      */
@@ -78,7 +73,7 @@ class ClassString extends ValueObject
     /**
      * Instantiate the class string if possible.
      *
-     * @param  array  $parameters
+     * @param  array<int, mixed>  $parameters
      *
      * @return object
      */

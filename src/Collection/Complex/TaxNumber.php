@@ -21,14 +21,9 @@ use XimkiVinki\ValueObjects\ValueObject;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(string $number, string|null $prefix = null)
  * @method static static from(string $number, string|null $prefix = null)
  * @method static static makeOrNull(string|null $number, string|null $prefix = null)
- *
- * @extends ValueObject<TKey, TValue>
  */
 class TaxNumber extends ValueObject
 {
@@ -107,7 +102,7 @@ class TaxNumber extends ValueObject
     /**
      * Get an array representation of the value object.
      *
-     * @return array
+     * @return array<string, string>
      */
     public function toArray(): array
     {

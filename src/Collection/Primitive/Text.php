@@ -21,14 +21,9 @@ use XimkiVinki\ValueObjects\ValueObject;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(string|Stringable $value)
  * @method static static from(string|Stringable $value)
  * @method static static makeOrNull(string|Stringable|null $value)
- *
- * @extends ValueObject<TKey, TValue>
  */
 class Text extends ValueObject
 {

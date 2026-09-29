@@ -25,10 +25,7 @@ use XimkiVinki\ValueObjects\Contracts\Immutable;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
- * @implements Arrayable<TKey, TValue>
+ * @implements Arrayable<int|string, mixed>
  */
 abstract class ValueObject implements \Stringable, Arrayable, Immutable
 {
@@ -61,7 +58,6 @@ abstract class ValueObject implements \Stringable, Arrayable, Immutable
 
     /**
      * Convenient method to create a value object statically.
-     *
      *
      * @return static
      */
@@ -100,7 +96,7 @@ abstract class ValueObject implements \Stringable, Arrayable, Immutable
      * Check if objects are instances of same class
      * and share the same properties and values.
      *
-     * @param  ValueObject<int|string, mixed>  $object
+     * @param  ValueObject  $object
      *
      * @return bool
      */
@@ -112,7 +108,7 @@ abstract class ValueObject implements \Stringable, Arrayable, Immutable
     /**
      * Inversion for `equals` method.
      *
-     * @param  ValueObject<int|string, mixed>  $object
+     * @param  ValueObject  $object
      *
      * @return bool
      */
@@ -124,7 +120,7 @@ abstract class ValueObject implements \Stringable, Arrayable, Immutable
     /**
      * Get an array representation of the value object.
      *
-     * @return array
+     * @return array<int|string, mixed>
      */
     public function toArray(): array
     {

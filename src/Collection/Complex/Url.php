@@ -21,14 +21,9 @@ use XimkiVinki\ValueObjects\Collection\Primitive\Text;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(string $value)
  * @method static static from(string $value)
  * @method static static makeOrNull(string|null $value)
- *
- * @extends Text<TKey, TValue>
  */
 class Url extends Text
 {
@@ -56,7 +51,7 @@ class Url extends Text
     /**
      * Define the rules for email validator.
      *
-     * @return array
+     * @return array<int, string>
      */
     protected function validationRules(): array
     {

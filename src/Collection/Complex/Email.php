@@ -20,14 +20,9 @@ use XimkiVinki\ValueObjects\Collection\Primitive\Text;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(string|Stringable $value)
  * @method static static from(string|Stringable $value)
  * @method static static makeOrNull(string|Stringable|null $value)
- *
- * @extends Text<TKey, TValue>
  */
 class Email extends Text
 {
@@ -67,7 +62,7 @@ class Email extends Text
     /**
      * Get an array representation of the value object.
      *
-     * @return array
+     * @return array<string, string|null>
      */
     public function toArray(): array
     {
@@ -98,7 +93,7 @@ class Email extends Text
     /**
      * Define the rules for email validator.
      *
-     * @return array
+     * @return array<int, string>
      */
     protected function validationRules(): array
     {

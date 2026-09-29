@@ -21,14 +21,9 @@ use XimkiVinki\ValueObjects\ValueObject;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(bool|int|string $value)
  * @method static static from(bool|int|string $value)
  * @method static static makeOrNull(bool|int|string|null $value)
- *
- * @extends ValueObject<TKey, TValue>
  */
 class Boolean extends ValueObject
 {
@@ -40,14 +35,14 @@ class Boolean extends ValueObject
     /**
      * Values that represent `true` boolean.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected array $trueValues = ['1', 'true', 'on', 'yes'];
 
     /**
      * Values that represent `false` boolean.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected array $falseValues = ['0', 'false', 'off', 'no'];
 

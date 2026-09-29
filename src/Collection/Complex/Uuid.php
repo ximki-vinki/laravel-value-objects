@@ -20,14 +20,9 @@ use XimkiVinki\ValueObjects\ValueObject;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(string $value, string|null $name = null)
  * @method static static from(string $value, string|null $name = null)
  * @method static static makeOrNull(string|null $value, string|null $name = null)
- *
- * @extends ValueObject<TKey, TValue>
  */
 class Uuid extends ValueObject
 {

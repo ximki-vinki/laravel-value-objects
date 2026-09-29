@@ -51,7 +51,7 @@ class ValueObjectMakeCommand extends GeneratorCommand
     /**
      * Get the console command options.
      *
-     * @return array
+     * @return list<array{0: string, 1: string|null, 2: int, 3: string}>
      */
     protected function getOptions(): array
     {

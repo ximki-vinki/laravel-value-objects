@@ -21,9 +21,6 @@ use XimkiVinki\ValueObjects\ValueObject;
  *
  * @author Michael Rubél <michael@laravel.software>
  *
- * @template TKey of array-key
- * @template TValue
- *
  * @method static static make(int|string|float $number, int $scale = 2)
  * @method static static from(int|string|float $number, int $scale = 2)
  * @method static static makeOrNull(int|string|float|null $number, int $scale = 2)
@@ -38,8 +35,6 @@ use XimkiVinki\ValueObjects\ValueObject;
  * @method string subtract(float|int|string|BigNumber $value)
  *
  * @see BigNumber
- *
- * @extends ValueObject<TKey, TValue>
  */
 class Number extends ValueObject
 {
@@ -110,7 +105,7 @@ class Number extends ValueObject
      * doesn't exist in `Number` and doesn't have a macro.
      *
      * @param  string  $method
-     * @param  array  $parameters
+     * @param  array<int, mixed>  $parameters
      *
      * @return mixed
      */

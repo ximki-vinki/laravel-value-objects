@@ -24,8 +24,6 @@ parameters:
         - '#Parameter \#1 \$string of function str expects string\|null, float given\.#'
         - '#Parameter \#1 \$string of function str expects string\|null, float\|int\|string\|null given\.#'
 
-    checkMissingIterableValueType: false
-
     reportUnmatchedIgnoredErrors: false
 
     checkOctaneCompatibility: true
