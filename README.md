@@ -12,7 +12,7 @@ A bunch of general-purpose value objects you can use in your Laravel application
 
 ---
 
-The package requires `PHP 8.2` or higher and `Laravel 10` or higher.
+The package requires `PHP 8.3` or higher and `Laravel 11` or higher.
 
 ## Installation
 Install the package using composer:
